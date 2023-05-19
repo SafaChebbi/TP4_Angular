@@ -1,0 +1,26 @@
+<h2> LISTE PRODUITS</h2>
+<br>
+<input type="number" [(ngModel)]="searchQuantity">
+<div class="container">
+ <table class="table table-striped">
+ <thead>
+ <tr>
+ <th scope="col">#</th>
+ <th scope="col">Categorie</th>
+ <th scope="col">Prix</th>
+ <th scope="col">Quantité</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr *ngFor="let p of ListProduct; let i=index">
+    <ng-container *ngIf="p.quantite<searchQuantity">
+        <th scope="row">{{i+1}}</th>
+        <td> {{p.categorie}} </td>
+        <td> {{p.prix}} </td>
+        <td> {{p.quantite}} </td>
+    </ng-container>
+ 
+ </tr>
+ </tbody>
+ </table>
+</div>

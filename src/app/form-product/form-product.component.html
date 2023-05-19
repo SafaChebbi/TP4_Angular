@@ -1,0 +1,23 @@
+<h2>AJOUT PRODUIT</h2>
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="save(f)">
+        <div>
+            <label>ID</label>
+            <input class="form-control" name="id" ngModel/>
+        </div>
+        <div>
+            <label>CATEGORIE</label>
+            <input class="form-control" name="categorie" ngModel/>
+        </div>
+        <div>
+            <label>PRIX</label>
+            <input class="form-control" name="prix" ngModel/>
+        </div>
+        <div>
+            <label>QUANTITé</label>
+            <input class="form-control" name="quantite" ngModel/>
+        </div>
+        <button class="btn btn-success" type="submit">SAVE</button>
+    </form>
+
+</div>
